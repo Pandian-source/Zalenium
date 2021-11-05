@@ -1,0 +1,44 @@
+# Pull the image from docker-selenium
+
+docker pull elgalu/selenium
+    
+# Pull the image from docker Zalenium
+    
+docker pull dosel/zalenium
+
+docker images
+
+
+Linux User
+
+ docker run --rm -ti --name zalenium -p 4444:4444 \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      -v /tmp/videos:/home/seluser/videos \
+      --privileged dosel/zalenium start 
+      
+ OSX User
+ 
+  docker run --rm -ti --name zalenium -p 4444:4444 \
+      -e DOCKER=17.06.2-ce \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      -v /tmp/videos:/home/seluser/videos \
+      --privileged dosel/zalenium start
+      
+ Windows User
+ 
+    docker run --rm -ti --name zalenium -p 4444:4444 ^
+      -v /var/run/docker.sock:/var/run/docker.sock ^
+      -v /c/Users/Pandiyan/temp/videos:/home/seluser/videos ^
+      --privileged dosel/zalenium start  
+         
+      
+ Point your tests to http://localhost:4444/wd/hub and run them 
+ 
+ http://localhost:4444/grid/console
+ 
+ http://localhost:4444/dashboard
+ 
+ http://localhost:4444/grid/admin/live
+ 
+ http://localhost:4444/grid/admin/live?refresh=20
+ 
