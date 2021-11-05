@@ -55,7 +55,7 @@ public class SendMailSSLWithAttachment extends DockerFirefox
 
 			message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("Email"));
 
-			message.setSubject("pandian Firstclass Automation Result");
+			message.setSubject("Firstclass Automation Result");
 
 			BodyPart messageBodyPart1 = new MimeBodyPart();
 
