@@ -9,13 +9,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-public class Browser 
+public class Browser
 {
 
 	public static RemoteWebDriver driver;
 
 	@BeforeSuite
-	public static void setUp() throws Exception 
+	public static void setUp() throws Exception
 	{
 
 		DesiredCapabilities Cap = new  DesiredCapabilities();
